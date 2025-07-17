@@ -93,6 +93,10 @@
 
 - Store The External Domain Metadata JSON object as a separate JSON file.
 
+***Test Requirements:*** 
+
+- The Conformance Tests should not modify nor do any transformations on The External Domain Metadata JSON object at all. If The Conformance Tests indicates a problem with The External Domain Metadata JSON object, The External Domain Metadata JSON object in the implementation code should be adjusted to fix the problem. The tests should only validate the JSON object in its original form.
+
 ***Functional Requirements:***
 
 - Implement The Function that generates and returns The External Domain Metadata JSON object. The record types that should be included in the The External Domain Metadata are The List of Tasks of The Project ('tasks') and The List of Contacts of The Space ('users').
@@ -104,6 +108,7 @@
     - The path to The Chef CLI executable is provided in the environment variables `CHEF_CLI_PATH`.
     - For the test to be successful The Chef CLI must return an empty output.
     - The test should always fail if The Chef CLI is not available.
+    - The Acceptance Tests should not modify nor do any transformations on The External Domain Metadata JSON object at all. The Acceptance Tests should just read The External Domain Metadata JSON object and pass it to The Chef CLI.
 
 ## Generate 'initial_domain_mapping.json'
 
@@ -120,6 +125,9 @@
 
 - Store The Initial Domain Mapping JSON object as a separate JSON file.
 
+***Test Requirements:***
+
+- The Conformance Tests should not modify nor do any transformations on The Initial Domain Mapping JSON object at all. If The Conformance Tests indicates a problem with The Initial Domain Mapping JSON object, The Initial Domain Mapping JSON object in the implementation code should be adjusted to fix the problem. The tests should only validate the JSON object in its original form.
 
 ***Functional Requirements:***
 
@@ -133,6 +141,7 @@
     - The path to The Chef CLI executable is provided in the environment variables `CHEF_CLI_PATH`.
     - The test should always fail if The Chef CLI returns a non-empty output.
     - The test should always fail if The Chef CLI is not available.
+    - The Acceptance Tests should not modify nor do any transformations on The Initial Domain Mapping JSON object at all. The Acceptance Tests should just read The Initial Domain Mapping JSON object and pass it to The Chef CLI.
 
 ## Pushing data to DevRev servers
 
